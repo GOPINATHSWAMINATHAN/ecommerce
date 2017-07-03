@@ -3,22 +3,29 @@ package com.dharani.navigationdemo.adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.dharani.navigationdemo.activity.ElectronicsProduct;
 import com.dharani.navigationdemo.activity.ProductListActivity;
 import com.dharani.navigationdemo.R;
 
+import java.util.ArrayList;
+
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHolder> {
 
-    private String[] dataSet;
+   private static ArrayList a,b,c,d;
 
-    public ProductAdapter(String[] data) {
-        this.dataSet = data;
+    public ProductAdapter(ArrayList a, ArrayList b, ArrayList c, ArrayList d) {
+        this.a=a;
+        this.b=b;
+        this.c=c;
+        this.d=d;
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
@@ -33,6 +40,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+
                     Intent inte = new Intent(context,ElectronicsProduct.class);
                     context.startActivity(inte);
                 }
@@ -52,12 +60,13 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        holder.txtProduct.setText(dataSet[position].toString());
+        holder.txtProduct.setText(a.get(position).toString());
+        Log.e("DEPARTMENT VALUE IS",""+a.get(0));
     }
 
 
     @Override
     public int getItemCount() {
-        return dataSet.length;
+        return a.size();
     }
 }

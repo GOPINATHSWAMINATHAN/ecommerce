@@ -39,7 +39,7 @@ public class Department extends AsyncTask<String, Void, String> {
     MyData obj = new MyData();
     Context context;
     String url = "http://www.gopinath.pe.hu/department.php";
-    String urlRetrieve = "http://www.silverlightsystems.co.uk/android/json.php";
+    //String urlRetrieve = "http://www.silverlightsystems.co.uk/android/json.php";
     public static String store1, store2;
     public static ArrayList<String> dept = new ArrayList();
     public static ArrayList<String> id = new ArrayList();
@@ -87,12 +87,13 @@ public class Department extends AsyncTask<String, Void, String> {
             JSONObject jsonObject = new JSONObject(jsondata);
             JSONArray jsonArray = jsonObject.getJSONArray("result");
 
+            Log.d("Testing : ", "" + jsonArray);
             if (jsonArray != null) {
-                Log.d("Testing : ", "" + jsonArray);
-                for (int i = 0; i < 4; i++) {
+
+                for (int i = 0; i < jsonArray.length(); i++) {
                     JSONObject object = jsonArray.getJSONObject(i);
                     // store1 = object.getString(obj.getProductName("department"));
-
+//
                     store1 = object.getString("dept_id");
                     store2 = object.getString("department");
 //

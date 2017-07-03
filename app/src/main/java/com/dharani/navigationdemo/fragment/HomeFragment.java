@@ -49,10 +49,11 @@ ArrayList al;
         for (int i = 0; i < MyData.flipperImages.length; i++){
             setFlipperImage(MyData.flipperImages[i]);
         }
+//        new Department().execute();
         EventBus.getDefault().register(this);
 
 
-       // new Department().execute();
+
         initViews();
         return view;
     }
@@ -63,7 +64,7 @@ ArrayList al;
         al2=event.id;
         adapter = new HomeAdapter(al,al2);
         recyclerView.setAdapter(adapter);
-       // Log.d("EVENT CLASS VALUES",""+al+""+al2);
+        Log.d("EVENT CLASS VALUES",""+al+""+al2);
     }
 
     // Inflate recyclerview and adapter for Homeadapter

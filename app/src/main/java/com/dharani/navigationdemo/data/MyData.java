@@ -10,12 +10,6 @@ import java.util.ArrayList;
 
 public class MyData {
 
-    public MyData() {
-        this.productName = productName;
-        this.id = id;
-
-    }
-
     public String getProductName()
     {
         return productName;
@@ -36,14 +30,14 @@ public class MyData {
 
     public static String productName;
 
-    public static String[] productImage = {
-            "http://api.androidhive.info/json/movies/1.jpg",
-            "http://api.androidhive.info/json/movies/1.jpg",
-            "http://api.androidhive.info/json/movies/1.jpg",
-            "http://api.androidhive.info/json/movies/1.jpg",
-            "http://api.androidhive.info/json/movies/1.jpg",
-            "http://api.androidhive.info/json/movies/1.jpg"
-    };
+//    public static String[] productImage = {
+//            "http://api.androidhive.info/json/movies/1.jpg",
+//            "http://api.androidhive.info/json/movies/1.jpg",
+//            "http://api.androidhive.info/json/movies/1.jpg",
+//            "http://api.androidhive.info/json/movies/1.jpg",
+//            "http://api.androidhive.info/json/movies/1.jpg",
+//            "http://api.androidhive.info/json/movies/1.jpg"
+//    };
 
     static {
         programs[0] = new String[]{"Mobile", "Mobile Accessories", "Smart Wearable tech", "Laptop", "Desktop PCs", "Gaming & Accessories", "Tablets", "Televisions", "Home Entertainment", "Mobile", "Mobile Accessories", "Smart Wearable tech", "Laptop", "Desktop PCs", "Gaming & Accessories", "Tablets", "Televisions", "Home Entertainment"};
